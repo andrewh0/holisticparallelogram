@@ -1,4 +1,9 @@
 language: node_js
 node_js:
-  - '0.8'
-  - '0.10'
+- 5.8.0
+# addons:
+#  ssh_known_hosts: # Add host IP
+before_install:
+- bash deploy/install.sh | sh
+after_success:
+- bash deploy/deploy.sh | sh
