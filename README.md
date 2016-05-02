@@ -2,6 +2,8 @@
 
 ScenicNinja uses your current location to find great views nearby. It utilizes the Google Places API to find parks and restaurants within 10km of your location that have reviews matching keywords like "panoramic" and "beautiful view". Anyone can use the service, but you'll need to sign-in with a Google account to save your favorite locations. Enjoy!
 
+Checkout the app in action [here](http://www.scenic.ninja/)
+
 **Screenshot**  
 <img src="http://i.imgur.com/Bj3RnoF.png" width="600px"/>  
 
