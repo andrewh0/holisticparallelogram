@@ -1,4 +1,6 @@
-var googleKeys = require(__dirname + '/../config/googleplus');
+// var googleKeys = require(__dirname + '/../config/googleplus');
+var googleClientId = process.env.GOOGLE_CLIENT_ID;
+var googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth');
 var User = require(__dirname + '/../users/userModel');
@@ -39,8 +41,8 @@ passport.deserializeUser(function(user, done) {
 });
 
 passport.use(new GoogleStrategy.OAuth2Strategy({
-  clientID: googleKeys.CLIENT_ID,
-  clientSecret: googleKeys.CLIENT_SECRET,
+  clientID: googleClientId,
+  clientSecret: googleClientSecret,
   callbackURL: '/auth/google/callback'
 }, function(accessToken, refreshToken, profile, done) {
   // Create a user if it is a new user, otherwise just get the user from the DB
