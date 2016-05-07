@@ -11,7 +11,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"No tests written yet.\" && exit 0",
-    "start": "node precompile.js",
+    "start": "webpack && node precompile.js",
     "dev": "nodemon precompile.js",
     "babel-node": "babel-node --presets=es2015"
   },
